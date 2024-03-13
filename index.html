@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emscripten Canvas Example</title>
+</head>
+<body >
+<canvas id="myCanvas" width="600" height="600" style="background-color: bisque;"></canvas>
+<canvas id="webgpu_canvas2" width="600" height="600" ></canvas>
+<button id="showButton">Show Triangle</button>
+<script src="a.out.js"></script>
+<script>
+    // Get the "runButton" element
+    document.getElementById("showButton").addEventListener("click", () => {
+        const result = Module.ccall(
+            "myFunction", // name of C function
+            null, // return type
+            null, // argument types
+            null, // arguments
+        );
+        });
+</script>    
+</body>
+</html>
